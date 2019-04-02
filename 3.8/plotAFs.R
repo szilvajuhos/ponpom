@@ -1,0 +1,8 @@
+library(ggplot2)
+X11()
+AF104 <- read.csv("103T.AFs.csv")
+ggplot(AF104, aes(TAF,NAF)) + geom_point()
+Sys.sleep(3)
+FP104AF <- subset(AF104,Filter=="PASS")
+ggplot(FP104AF, aes(TAF,NAF)) + geom_point()
+Sys.sleep(10)
